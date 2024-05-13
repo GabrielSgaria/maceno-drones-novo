@@ -55,13 +55,12 @@ export function NavBar() {
                                 className={`flex min-w-0 flex-row items-center justify-center gap-8 text-base ${isMenuOpen ? "flex-col" : "flex-row"
                                     }`}
                             >
-                                <Link
-                                    onClick={closeMenu}
-                                    href="/"
-                                    className="cursor-pointer px-3 bg-zinc-950 text-lg text-center text-zinc-50/70 hover:text-zinc-50 transition-all uppercase hover:border hover:border-zinc-50 rounded-full w-[90px] h-[30px]"
+                                <button
+                                    onClick={() => scrollToSection("results")}
+                                    className="cursor-pointer px-3 bg-zinc-950 text-lg text-zinc-50/70 hover:text-zinc-50 transition-all uppercase hover:border hover:border-zinc-50 rounded-full w-[90px] h-[30px] "
                                 >
                                     Sobre
-                                </Link>
+                                </button>
                                 <button
                                     onClick={() => scrollToSection("services")}
                                     className="cursor-pointer px-3 bg-zinc-950 text-lg text-zinc-50/70 hover:text-zinc-50 transition-all uppercase hover:border hover:border-zinc-50 rounded-full w-[120px] h-[30px]"
@@ -74,12 +73,12 @@ export function NavBar() {
                                 >
                                     Projetos
                                 </button>
-                                <button
-                                    onClick={() => scrollToSection("team")}
-                                    className="cursor-pointer px-3 bg-zinc-950 text-lg text-zinc-50/70 hover:text-zinc-50 transition-all uppercase hover:border hover:border-zinc-50 rounded-full w-[170px] h-[30px]"
+                                <Link
+                                    href='/portfolio'
+                                    className="cursor-pointer px-3 bg-zinc-950 text-lg text-zinc-50/70 hover:text-zinc-50 transition-all uppercase hover:border hover:border-zinc-50 rounded-full w-[125px] h-[30px]"
                                 >
-                                    Equipamentos
-                                </button>
+                                    Portfólio
+                                </Link>
                                 <button
                                     onClick={() => scrollToSection("clients")}
                                     className="cursor-pointer px-3 bg-zinc-950 text-lg text-zinc-50/70 hover:text-zinc-50 transition-all uppercase hover:border hover:border-zinc-50 rounded-full w-[120px] h-[30px]"
