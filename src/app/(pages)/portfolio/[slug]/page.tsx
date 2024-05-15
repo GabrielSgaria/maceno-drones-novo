@@ -4,11 +4,12 @@ import { getPageData } from "@/utils/actions";
 
 
 export default async function PageProjects() {
-      const { portfolio } = await getPageData();
+      const portfolio = await getPageData();
      console.log(portfolio)
+     
     return (
         <div>
-            <PortfolioContent portfolio={portfolio} />
+            <PortfolioContent portfolios={portfolio.portfolios} />
         </div>
     )
 }
