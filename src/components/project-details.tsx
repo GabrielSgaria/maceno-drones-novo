@@ -34,17 +34,19 @@ export async function ProjectDetails({ projectSlug }: ProjectDetailsProps) {
         <h1 className="text-3xl font-bold uppercase">{detailsProject.nomeDoProjeto}</h1>
         <p className="text-lg w-full max-w-[900px] text-justify">{detailsProject.descricao}</p>
       </div>
+      {detailsProject.fotos.length > 0 && (
+        <div className="flex items-center flex-col mt-20">
+          <h1 className="text-3xl font-bold text-start w-full uppercase">Fotos Profissionais</h1>
+          <div className="grid grid-flow-row grid-cols-2 gap-2 mt-10">
 
-      <div className="flex items-center flex-col mt-20">
-        <h1 className="text-3xl font-bold text-start w-full uppercase">Fotos Profissionais</h1>
-        <div className="grid grid-flow-row grid-cols-2 gap-2 mt-10">
-          {detailsProject.fotos.map((fotos, i) => (
-            <div key={i}>
-              <Image width={900} height={900} src={`${fotos.url}`} alt={detailsProject.nomeDoProjeto} className="rounded-xl" />
-            </div>
-          ))}
+            {detailsProject.fotos.map((fotos, i) => (
+              <div key={i}>
+                <Image width={900} height={900} src={`${fotos.url}`} alt={detailsProject.nomeDoProjeto} className="rounded-xl" />
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
+      )}
       {detailsProject.videoDesktop.length > 0 && (
         <div className="flex items-center flex-col mt-20">
           <h1 className="text-3xl font-bold text-start w-full uppercase">Videos Profissionais</h1>
