@@ -1,19 +1,18 @@
 import ProjectList from "@/components/project-list";
 import { getAllProjects } from "@/utils/actions";
+import Image from "next/image";
 
 export default async function Portfolio() {
   try {
     const { portfolios } = await getAllProjects();
-
-    if (!portfolios || !Array.isArray(portfolios)) {
-      throw new Error("Portfolios não estão no formato esperado.");
-    }
-
-    console.log(portfolios);
-
+    console.log("todos os portfoios inicio", portfolios, "todos os portfoios fim")
     return (
       <div>
-        <ProjectList portfolios={portfolios} />
+        {portfolios.length > 0 ? (
+          <ProjectList portfolios={portfolios} />
+        ) : (
+          <div>Não foram encontrados projetos.</div>
+        )}
       </div>
     );
   } catch (error) {
