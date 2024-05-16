@@ -34,12 +34,12 @@ export type PageProjectsData = {
         },
         fotos: [
             {
-                url: string | undefined
+                url: string | null
             }
         ]
         videoDesktop: [
             {
-                url: string | undefined
+                url: string | null
             }
         ]
 
