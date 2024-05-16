@@ -24,7 +24,7 @@ export default async function Portfolio() {
     
     return (
         <div>
-            <ProjectList portfolios={portfolios}/>
+            <ProjectList/>
         </div>
     )
 }
