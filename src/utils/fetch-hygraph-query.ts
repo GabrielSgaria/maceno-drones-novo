@@ -19,9 +19,7 @@ export const fetchHygraphQuery = async (query: string) => {
         })
 
         const { data } = await response.json()
-        return {
-            projects: data.portfolios
-        }
+        return data
     } catch (err) {
         console.log(err)
         return [];
