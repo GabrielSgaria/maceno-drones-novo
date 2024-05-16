@@ -1,5 +1,3 @@
-
-
 import { ProjectDetails } from "@/components/project-details";
 import { PageProjectsData } from "@/types/portfolio-info";
 import { fetchHygraphQuery } from "@/utils/fetch-hygraph-query";

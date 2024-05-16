@@ -56,12 +56,6 @@ export function NavBar() {
                                     }`}
                             >
                                 <button
-                                    onClick={() => scrollToSection("results")}
-                                    className="cursor-pointer px-3 bg-zinc-950 text-lg text-zinc-50/70 hover:text-zinc-50 transition-all uppercase hover:border hover:border-zinc-50 rounded-full w-[90px] h-[30px] "
-                                >
-                                    Sobre
-                                </button>
-                                <button
                                     onClick={() => scrollToSection("services")}
                                     className="cursor-pointer px-3 bg-zinc-950 text-lg text-zinc-50/70 hover:text-zinc-50 transition-all uppercase hover:border hover:border-zinc-50 rounded-full w-[120px] h-[30px]"
                                 >
