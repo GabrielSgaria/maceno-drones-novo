@@ -6,9 +6,9 @@ export default function ProjectList({ portfolios }: PortfolioContentData) {
     return (
         <div className="container mx-auto py-16">
             <h1 className="text-3xl font-bold uppercase">Portfólio Maceno drones</h1>
-            {/* {portfolios.length > 0 ? (
+            {portfolios && portfolios.length > 0 ? (
                 <div className="py-16 grid grid-flow-row grid-cols-3 gap-5">
-                    {portfolios.map((projeto, index) => (
+                    {portfolios?.map((projeto, index) => (
                         <div key={index} className="relative opacity-75 hover:opacity-100">
                             <Link href={`/portfolio/${projeto.slugProjeto}`}>
                                 <Image
@@ -29,7 +29,7 @@ export default function ProjectList({ portfolios }: PortfolioContentData) {
                 </div>
             ) : (
                 <div>Não foram encontrados projetos.</div>
-            )} */}
+            )}
         
         </div>
     );

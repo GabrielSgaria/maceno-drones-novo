@@ -19,7 +19,7 @@ export type PortfolioInfo =
     }
 
 export type PortfolioContentData = {
-    portfolios: PortfolioInfo[],
+    portfolios?: PortfolioInfo[],
 }
 
 export type PageProjectsData = {
