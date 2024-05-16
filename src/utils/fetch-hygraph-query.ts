@@ -1,4 +1,4 @@
-
+'use server'
 const url = process.env.HYGRAPH_URL as string
 const token = process.env.HYGRAPH_TOKEN as string
 
@@ -19,9 +19,11 @@ export const fetchHygraphQuery = async (query: string) => {
         })
 
         const { data } = await response.json()
-        return data
+        return {
+            projects: data.portfolios
+        }
     } catch (err) {
         console.log(err)
-        return {};
+        return [];
     }
 }
