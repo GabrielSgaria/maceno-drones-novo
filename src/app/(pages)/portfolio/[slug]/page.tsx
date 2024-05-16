@@ -24,8 +24,7 @@ const getProjectDetails = async (slugProjeto: string): Promise<PageProjectsData>
         }
         videoDesktop {
           url
-        }
-        
+        }F
       }
     }
 `

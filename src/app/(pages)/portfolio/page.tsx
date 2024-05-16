@@ -20,11 +20,10 @@ const query = `query MyQuery {
   }
 `
 export default async function Portfolio() {
-    const  {portfolios}  = await fetchHygraphQuery(query);
-    
+    const { portfolios } = await fetchHygraphQuery(query);
     return (
         <div>
-            <ProjectList/>
+            <ProjectList portfolios={portfolios} />
         </div>
     )
 }

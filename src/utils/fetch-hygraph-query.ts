@@ -10,18 +10,18 @@ export const fetchHygraphQuery = async (query: string) => {
                 'Content-Type': 'application/json',
                 Accept: 'application/json',
                 Authorization: `Bearer ${token}`
-                
+
             },
             body: JSON.stringify({ query }),
-            next: {
-                revalidate: 60 * 60 * 24 //24 hours
-            }
         })
-
+        
         const { data } = await response.json()
         return data
+
     } catch (err) {
+     
         console.log(err)
         return [];
+    
     }
 }
