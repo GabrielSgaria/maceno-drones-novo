@@ -1,15 +1,48 @@
 
-import { PortfolioContent } from "@/components/portfolio-content";
-import { getPageData } from "@/utils/actions";
 
+import { ProjectDetails } from "@/components/project-details";
+import { PageProjectsData } from "@/types/portfolio-info";
+import { fetchHygraphQuery } from "@/utils/fetch-hygraph-query";
 
-export default async function PageProjects() {
-      const portfolio = await getPageData();
-     console.log(portfolio)
-     
+type PageProjectsProps = {
+    params: {
+        slug: string;
+    }
+}
+
+const getProjectDetails = async (slugProjeto: string): Promise<PageProjectsData> => {
+    const query = `
+    query MyQuery {
+      portfolio(where: {slugProjeto: "${slugProjeto}"}) {
+        descricao
+        id
+        nomeDoProjeto
+        slugProjeto
+        fotoCapa {
+          url
+        }
+        fotos {
+          url
+        }
+        videoDesktop {
+          url
+        }
+        
+      }
+    }
+    
+`
+    return fetchHygraphQuery(
+        query
+    )
+}
+
+export default async function PageProjects({ params: { slug } }: PageProjectsProps) {
+    const project  = await getProjectDetails(slug);
+    console.log(project)
     return (
         <div>
-            <PortfolioContent portfolios={portfolio.portfolios} />
+            <ProjectDetails projectSlug={project} />
         </div>
     )
 }

@@ -1,4 +1,4 @@
-export type PortfolioInfo = [
+export type PortfolioInfo = 
     {
         id: string,
         descricao: string,
@@ -9,16 +9,20 @@ export type PortfolioInfo = [
         },
         fotos: [
             {
-                url: string | null
+                url: string | undefined
             }
         ]
         videoDesktop: {
-            url: string | null
+            url: string | undefined
         }
 
     }
-]
+
 
 export type PortfolioContentData = {
-    portfolios: PortfolioInfo,
+    portfolios: PortfolioInfo[],
+}
+
+export type PageProjectsData = {
+    project: PortfolioInfo;
 }

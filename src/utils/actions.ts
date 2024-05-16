@@ -1,7 +1,7 @@
-import { PortfolioContentData } from "@/types/portfolio-info"
+import { PageProjectsData, PortfolioContentData } from "@/types/portfolio-info"
 import { fetchHygraphQuery } from "./fetch-hygraph-query"
 
-export const getPageData = async (): Promise<PortfolioContentData> => {
+export const getAllProjects = async (): Promise<PortfolioContentData> => {
   const query = `query MyQuery {
       portfolios (stage: PUBLISHED) {
         descricao
