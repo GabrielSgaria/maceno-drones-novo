@@ -1,30 +1,5 @@
-import { PageProjectsData } from "@/types/portfolio-info";
+import { ProjectDetailsProps } from "@/types/portfolio-info";
 import Image from "next/image";
-
-type ProjectDetailsProps = {
-  projectSlug: {
-    portfolio: {
-      id: string,
-      descricao: string,
-      nomeDoProjeto: string,
-      slugProjeto: string,
-      fotoCapa: {
-        url: string
-      },
-      fotos: [
-        {
-          url: string | null
-        }
-      ]
-      videoDesktop: [
-        {
-          url: string | null
-        }
-      ]
-
-    }
-  }
-}
 
 export async function ProjectDetails({ projectSlug }: ProjectDetailsProps) {
   let detailsProject = projectSlug.portfolio
