@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default async function Portfolio() {
     const { portfolios } = await getAllProjects();
-    // console.log(portfolios)
+    console.log(portfolios)
     return (
         <div>
             <ProjectList portfolios={portfolios} />
