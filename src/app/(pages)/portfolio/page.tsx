@@ -1,12 +1,29 @@
 import ProjectList from "@/components/project-list";
-import { getAllProjects } from "@/utils/actions";
+import { fetchHygraphQuery } from "@/utils/fetch-hygraph-query";
 
+const query = `query MyQuery {
+    portfolios (stage: PUBLISHED) {
+      descricao
+      nomeDoProjeto
+      id
+      slugProjeto
+      videoDesktop {
+        url
+      }
+      fotoCapa {
+        url
+      }
+      fotos {
+        url
+      }
+    }
+  }
+`
 export default async function Portfolio() {
-    const { portfolios } = await getAllProjects();
+    const { portfolios } = await fetchHygraphQuery(query);
     return (
         <div>
             <ProjectList portfolios={portfolios} />
         </div>
-
     )
 }

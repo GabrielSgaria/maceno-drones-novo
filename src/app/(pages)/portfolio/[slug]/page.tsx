@@ -3,13 +3,13 @@ import { PageProjectsData } from "@/types/portfolio-info";
 import { fetchHygraphQuery } from "@/utils/fetch-hygraph-query";
 
 type PageProjectsProps = {
-    params: {
-        slug: string;
-    }
+  params: {
+    slug: string;
+  }
 }
 
 const getProjectDetails = async (slugProjeto: string): Promise<PageProjectsData> => {
-    const query = `
+  const query = `
     query MyQuery {
       portfolio(where: {slugProjeto: "${slugProjeto}"}) {
         descricao
@@ -29,17 +29,17 @@ const getProjectDetails = async (slugProjeto: string): Promise<PageProjectsData>
       }
     }
 `
-    return fetchHygraphQuery(
-        query
-    )
+  return await fetchHygraphQuery(
+    query
+  )
 }
 
 export default async function PageProjects({ params: { slug } }: PageProjectsProps) {
-    const project  = await getProjectDetails(slug);
-    console.log(project)
-    return (
-        <div>
-            <ProjectDetails projectSlug={project} />
-        </div>
-    )
+  const project = await getProjectDetails(slug);
+  // console.log(project)
+  return (
+    <div>
+      <ProjectDetails projectSlug={project} />
+    </div>
+  )
 }
