@@ -52,7 +52,7 @@ export function NavBar() {
                     >
                         <nav className="md:flex grow justify-center ">
                             <div
-                                className={`flex min-w-0 flex-row items-center justify-center gap-8 text-base ${isMenuOpen ? "flex-col" : "flex-row"
+                                className={`flex min-w-0 flex-row items-center justify-center gap-8 text-base text-center ${isMenuOpen ? "flex-col" : "flex-row"
                                     }`}
                             >
                                 <button
@@ -68,10 +68,10 @@ export function NavBar() {
                                     Projetos
                                 </button>
                                 <Link
-                                    href='/portfolio'
-                                    className="cursor-pointer px-3 bg-zinc-950 text-lg text-zinc-50/70 hover:text-zinc-50 transition-all uppercase hover:border hover:border-zinc-50 rounded-full w-[125px] h-[30px]"
+                                    href="/portfolio"
+                                    className="flex items-center justify-center text-center cursor-pointer px-3 bg-zinc-950 text-lg text-zinc-50/70 hover:text-zinc-50 transition-all uppercase hover:border hover:border-zinc-50 rounded-full w-[130px] h-[30px]"
                                 >
-                                    Portfólio
+                                    <p>Portfólio</p>
                                 </Link>
                                 <button
                                     onClick={() => scrollToSection("clients")}

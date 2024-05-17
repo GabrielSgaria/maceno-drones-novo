@@ -19,7 +19,7 @@ export default function Home() {
           <h1 className="text-[40px] md:text-[100px] lg:text-[130px] font-extrabold text-center text-white relative z-20 mb-3 sm:mb-0 uppercase">
             Maceno Films
           </h1>
-          <p className="md:text-2xl text-[20px] lg:text-4xl font-bold text-center text-white absolute z-20 uppercase top-[250px] sm:top-[290px] tracking-[10px] sm:tracking-[30px]">
+          <p className="md:text-2xl text-[20px] lg:text-4xl font-bold text-center text-white absolute z-20 uppercase top-[50px] sm:top-[290px] md:top-[230px] tracking-[10px] sm:tracking-[30px]">
             company
           </p>
           <div className="w-[40rem] h-40 relative">
@@ -40,7 +40,7 @@ export default function Home() {
             <div className="absolute inset-0 w-full h-full bg-zinc-950 [mask-image:radial-gradient(350px_200px_at_top,transparent_20%,white)]"></div>
           </div>
         <div className="container mx-auto flex justify-center items-center mt-5">
-          <div className="grid grid-flow-col grid-cols-4 gap-3">
+          <div className="grid px-4 grid-flow-row md:grid-flow-col grid-cols-2 sm:grid-cols-4 gap-3">
             <CardCounter
               andMoney=""
               numberCardCounter={82}
@@ -76,7 +76,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-16">
+      <section className="py-16" id='services'>
         <div className="mx-auto container flex items-center justify-center mb-10">
           <h1 className="text-5xl font-bold">NOSSOS SERVIÇOS</h1>
         </div>
@@ -85,28 +85,28 @@ export default function Home() {
             imageCardServices="/image/fotos/DJI_0548.JPG"
             altCardServices="Institucional Image"
             textCardServices="Videos Institucionais"
-            descCardServices="descrição dos videos institucionais descrição dos videos institucionais descrição dos videos institucionais descrição dos videos institucionais"
+            descCardServices="Eleve o visual da sua marca com vídeos institucionais de alta qualidade. capturo valores, missão e serviços de forma profissional, usando filmagem avançada e drones para destacar sua marca."
 
           />
           <CardServices
             imageCardServices="/image/fotos/dji_fly_20231122_084012_150_1700653219772_photo_optimized.jpg"
-            altCardServices="Acompanhamento de obra"
-            textCardServices="Acompanhamento de Obra"
-            descCardServices="descrição dos videos institucionais descrição dos videos institucionais descrição dos videos institucionais descrição dos videos institucionais"
+            altCardServices="Vídeos Imobiliários"
+            textCardServices="Vídeos Imobiliários"
+            descCardServices="Destaque imóveis com vídeos de alta qualidade. Registro cada detalhe, oferecendo uma experiência envolvente que atrai compradores em potencial."
 
           />
           <CardServices
             imageCardServices="/image/fotos/dji_fly_20231122_083044_135_1700652653902_photo_optimized.jpg"
-            altCardServices="Reels"
-            textCardServices="Reels profissionais"
-            descCardServices="descrição dos videos institucionais descrição dos videos institucionais descrição dos videos institucionais descrição dos videos institucionais"
+            altCardServices="Eventos"
+            textCardServices="Eventos"
+            descCardServices="Capture a emoção do evento com um vídeo profissional. Especializado em cobrir eventos de lutas, drift de carros, shows de manobras radicais. Com técnicas avançadas de filmagem e drones, garanto um vídeo impactante e memorável."
 
           />
           <CardServices
             imageCardServices="/image/fotos/res1.jpg"
             altCardServices="Criativo para anuncios"
             textCardServices="Criativo para anuncios"
-            descCardServices="descrição dos videos institucionais descrição dos videos institucionais descrição dos videos institucionais descrição dos videos institucionais"
+            descCardServices="Maximize o impacto da sua campanha com vídeos dinâmicos. Destaco ofertas e produtos de forma atraente, capturando a atenção do público-alvo e impulsionando suas vendas com produções inovadoras e profissionais."
           />
         </div>
       </section>
