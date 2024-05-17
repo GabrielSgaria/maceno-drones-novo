@@ -6,8 +6,8 @@ export type PortfolioInfo = {
   fotoCapa: {
     url: string
   },
-  fotos: Array<{ url: string | undefined }>,
-  videoDesktop: Array<{ url: string | undefined }>
+  fotos: { url: string | undefined }[],
+  videoDesktop: { url: string | undefined }[]
 }
 
 export type PortfolioContentData = {
@@ -15,69 +15,9 @@ export type PortfolioContentData = {
 }
 
 export type PageProjectsData = {
-  portfolio: {
-    id: string,
-    descricao: string,
-    nomeDoProjeto: string,
-    slugProjeto: string,
-    fotoCapa: {
-      url: string
-    },
-    fotos: [
-      {
-        url: string | null
-      }
-    ]
-    videoDesktop: [
-      {
-        url: string | null
-      }
-    ]
-  }
+  portfolio: PortfolioInfo | null
 }
 
 export type ProjectDetailsProps = {
-  projectSlug: {
-    portfolio: {
-      id: string,
-      descricao: string,
-      nomeDoProjeto: string,
-      slugProjeto: string,
-      fotoCapa: {
-        url: string
-      },
-      fotos: [
-        {
-          url: string | null
-        }
-      ]
-      videoDesktop: [
-        {
-          url: string | null
-        }
-      ]
-
-    }
-  }
+  projectSlug: PageProjectsData
 }
-
-
-
-// export type PortfolioInfo =
-//   {
-//     id: string,
-//     descricao: string,
-//     nomeDoProjeto: string,
-//     slugProjeto: string,
-//     fotoCapa: {
-//       url: string
-//     },
-//     fotos: [
-//       {
-//         url: string | undefined
-//       }
-//     ]
-//     videoDesktop: {
-//       url: string | undefined
-//     }
-//   }

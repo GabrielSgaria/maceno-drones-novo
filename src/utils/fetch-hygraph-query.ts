@@ -16,7 +16,7 @@ export const fetchHygraphQuery = async (query: string) => {
         });
 
         if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
+            throw new Error(`response erro! status: ${response.status}`);
         }
 
         const result = await response.json();

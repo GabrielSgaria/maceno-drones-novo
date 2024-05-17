@@ -24,21 +24,26 @@ const getProjectDetails = async (slugProjeto: string): Promise<PageProjectsData>
         }
         videoDesktop {
           url
-        }F
+        }
       }
     }
-`
-  return await fetchHygraphQuery(
-    query
-  )
+  `;
+  
+  const data = await fetchHygraphQuery(query);
+  return { portfolio: data?.portfolio || null };
 }
 
 export default async function PageProjects({ params: { slug } }: PageProjectsProps) {
-  const project = await getProjectDetails(slug);
-  // console.log(project)
+  const data = await getProjectDetails(slug);
+  const { portfolio } = data;
+
+  if (!portfolio) {
+    return <div>Project not found</div>;
+  }
+
   return (
     <div>
-      <ProjectDetails projectSlug={project} />
+      <ProjectDetails projectSlug={data} />
     </div>
-  )
+  );
 }

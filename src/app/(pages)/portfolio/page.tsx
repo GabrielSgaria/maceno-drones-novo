@@ -22,7 +22,7 @@ const query = `query MyQuery {
 export default async function Portfolio() {
   const data = await fetchHygraphQuery(query);
   if (!data || !data.portfolios) {
-    return <div>Error loading portfolios</div>;
+    return <div>Erro ao carregar o portfolio</div>;
   }
 
   const { portfolios } = data;
