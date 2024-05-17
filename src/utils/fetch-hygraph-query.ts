@@ -1,5 +1,5 @@
 'use server'
-import { unstable_cache, revalidateTag }  from "next/cache"; 'next/cache'
+import { unstable_cache, revalidateTag }  from "next/cache";
 
 const url = process.env.HYGRAPH_URL as string;
 const token = process.env.HYGRAPH_TOKEN as string;
