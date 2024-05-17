@@ -32,5 +32,6 @@ export const fetchHygraphQuery = unstable_cache(async (query: string) => {
         return null;
     }
 }, ['portfolio'], {
+    revalidate: 1000,
     tags: ['portfolio']
 })
