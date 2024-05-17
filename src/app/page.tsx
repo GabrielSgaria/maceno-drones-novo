@@ -5,7 +5,6 @@ import { CardServices } from "@/components/card-services";
 import { ClientsCarrousel } from "@/components/carrousel-clients";
 import { CardCounter } from "@/components/counter-up";
 import { Footer } from "@/components/footer";
-import { NavBar } from "@/components/nav-bar";
 import { SparklesCore } from "@/components/ui/sparkles";
 import Link from "next/link";
 

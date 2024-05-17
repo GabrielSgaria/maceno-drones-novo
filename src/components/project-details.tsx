@@ -1,8 +1,10 @@
 import { ProjectDetailsProps } from "@/types/portfolio-info";
+import { revalidateTag } from "next/cache";
 import Image from "next/image";
 
 export function ProjectDetails({ projectSlug }: ProjectDetailsProps) {
   const detailsProject = projectSlug.portfolio;
+   revalidateTag('portfolio')
 
   if (!detailsProject) {
     return <div>Project details not found</div>;

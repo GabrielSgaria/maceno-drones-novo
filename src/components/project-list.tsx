@@ -11,7 +11,7 @@ export default function ProjectList({ portfolios }: PortfolioContentData) {
             {portfolios && portfolios.length > 0 ? (
                 <div className="py-16 flex-wrap-reverse flex space-y-5 gap-5 justify-center">
                     {portfolios?.map((projeto, index) => (
-                        <div key={index} className="relative opacity-75 hover:opacity-100 max-w-[410px]">
+                        <div key={index} className="relative opacity-75 hover:opacity-100 max-w-[410px] max-h-[250px]">
                             <Link href={`/portfolio/${projeto.slugProjeto}`} className="w-full h-full">
                                 <Image
                                     width={900}
