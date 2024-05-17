@@ -1,5 +1,5 @@
 'use server'
-import { unstable_cache, revalidateTag }  from "next/cache";
+import { unstable_cache, revalidateTag } from "next/cache";
 
 const url = process.env.HYGRAPH_URL as string;
 const token = process.env.HYGRAPH_TOKEN as string;
@@ -14,6 +14,11 @@ export const fetchHygraphQuery = unstable_cache(async (query: string) => {
                 Authorization: `Bearer ${token}`
             },
             body: JSON.stringify({ query }),
+            next: {
+                tags: ['cache-portfolio'],
+                
+            },
+            cache: 'force-cache'
         });
         
         if (!response.ok) {
@@ -28,4 +33,4 @@ export const fetchHygraphQuery = unstable_cache(async (query: string) => {
     }
 }, ['cache-portfolio'], {
     tags: ['cache-portfolio']
-})
+});
