@@ -1,13 +1,15 @@
 import { PortfolioContentData } from "@/types/portfolio-info";
+import { revalidateTag } from "next/cache";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function ProjectList({ portfolios }: PortfolioContentData) {
+    revalidateTag('portfolio')
     return (
         <div className="container mx-auto py-16">
             <h1 className="text-3xl font-bold uppercase">Portfólio Maceno drones</h1>
             {portfolios && portfolios.length > 0 ? (
-                <div className="py-16 flex-wrap-reverse flex space-y-5 gap-5">
+                <div className="py-16 flex-wrap-reverse flex space-y-5 gap-5 justify-center">
                     {portfolios?.map((projeto, index) => (
                         <div key={index} className="relative opacity-75 hover:opacity-100 max-w-[410px]">
                             <Link href={`/portfolio/${projeto.slugProjeto}`} className="w-full h-full">

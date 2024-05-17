@@ -23,15 +23,18 @@ const query = `query MyQuery {
 export default async function Portfolio() {
   const data = await fetchHygraphQuery(query);
   if (!data || !data.portfolios) {
-    revalidateTag('portfolio')
     return <div>Erro ao carregar o portfolio</div>;
+  } else {
+    revalidateTag('portfolio')
+    const { portfolios } = data;
+
+    return (
+      
+      <div>
+        <ProjectList portfolios={portfolios} />
+      </div>
+    );
+
   }
 
-  const { portfolios } = data;
-
-  return (
-    <div>
-      <ProjectList portfolios={portfolios} />
-    </div>
-  );
 }
