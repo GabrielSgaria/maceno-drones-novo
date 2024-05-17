@@ -10,16 +10,16 @@ export default function ProjectList({ portfolios }: PortfolioContentData) {
                 <div className="py-16 grid grid-flow-row grid-cols-3 gap-5">
                     {portfolios?.map((projeto, index) => (
                         <div key={index} className="relative opacity-75 hover:opacity-100">
-                            <Link href={`/portfolio/${projeto.slugProjeto}`}>
+                            <Link href={`/portfolio/${projeto.slugProjeto}`} className="w-full h-full">
                                 <Image
                                     width={900}
                                     height={900}
                                     src={projeto.fotoCapa.url}
                                     alt={projeto.nomeDoProjeto}
-                                    className="rounded-xl"
+                                    className="rounded-xl object-cover w-full h-full"
                                 />
                                 <div className="absolute inset-0 flex items-center justify-center">
-                                    <p className="text-3xl font-bold text-zinc-50 uppercase">
+                                    <p className="text-2xl font-bold text-zinc-50 uppercase w-full text-center">
                                         {projeto.nomeDoProjeto}
                                     </p>
                                 </div>

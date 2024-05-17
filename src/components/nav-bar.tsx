@@ -62,10 +62,10 @@ export function NavBar() {
                                     Serviços
                                 </button>
                                 <button
-                                    onClick={() => scrollToSection("results")}
+                                    onClick={() => scrollToSection("clients")}
                                     className="cursor-pointer px-3 bg-zinc-950 text-lg text-zinc-50/70 hover:text-zinc-50 transition-all uppercase hover:border hover:border-zinc-50 rounded-full w-[120px] h-[30px]"
                                 >
-                                    Projetos
+                                    Clientes
                                 </button>
                                 <Link
                                     href="/portfolio"
@@ -74,7 +74,7 @@ export function NavBar() {
                                     <p>Portfólio</p>
                                 </Link>
                                 <button
-                                    onClick={() => scrollToSection("clients")}
+                                    onClick={() => scrollToSection("contacts")}
                                     className="cursor-pointer px-3 bg-zinc-950 text-lg text-zinc-50/70 hover:text-zinc-50 transition-all uppercase hover:border hover:border-zinc-50 rounded-full w-[120px] h-[30px]"
                                 >
                                     Contato

@@ -110,7 +110,7 @@ export default function Home() {
           />
         </div>
       </section>
-      <div>
+      <div id='clients'>
         <ClientsCarrousel />
       </div>
       <section className="py-16">

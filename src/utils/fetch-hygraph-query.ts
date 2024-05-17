@@ -1,9 +1,10 @@
 'use server'
+import { unstable_cache }  from "next/cache"; 'next/cache'
 
 const url = process.env.HYGRAPH_URL as string;
 const token = process.env.HYGRAPH_TOKEN as string;
 
-export const fetchHygraphQuery = async (query: string) => {
+export const fetchHygraphQuery = unstable_cache(async (query: string) => {
     try {
         const response = await fetch(url, {
             method: "POST",
@@ -25,4 +26,6 @@ export const fetchHygraphQuery = async (query: string) => {
         console.error("Error fetching data:", err);
         return null;
     }
-};
+}, ['cache-portfolio'], {
+    tags: ['cache-portfolio']
+})
