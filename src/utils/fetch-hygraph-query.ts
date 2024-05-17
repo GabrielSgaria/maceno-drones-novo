@@ -1,6 +1,7 @@
 'use server'
-const url = process.env.HYGRAPH_URL as string
-const token = process.env.HYGRAPH_TOKEN as string
+
+const url = process.env.HYGRAPH_URL as string;
+const token = process.env.HYGRAPH_TOKEN as string;
 
 export const fetchHygraphQuery = async (query: string) => {
     try {
@@ -10,18 +11,18 @@ export const fetchHygraphQuery = async (query: string) => {
                 'Content-Type': 'application/json',
                 Accept: 'application/json',
                 Authorization: `Bearer ${token}`
-
             },
             body: JSON.stringify({ query }),
-        })
-        
-        const { data } = await response.json()
-        return data
+        });
 
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        const result = await response.json();
+        return result.data;
     } catch (err) {
-     
-        console.log(err)
-        return [];
-    
+        console.error("Error fetching data:", err);
+        return null;
     }
-}
+};

@@ -2,28 +2,34 @@ import ProjectList from "@/components/project-list";
 import { fetchHygraphQuery } from "@/utils/fetch-hygraph-query";
 
 const query = `query MyQuery {
-    portfolios (stage: PUBLISHED) {
+  portfolios(stage: PUBLISHED) {
       descricao
       nomeDoProjeto
       id
       slugProjeto
       videoDesktop {
-        url
+          url
       }
       fotoCapa {
-        url
+          url
       }
       fotos {
-        url
+          url
       }
-    }
   }
-`
+}`;
+
 export default async function Portfolio() {
-    const { portfolios } = await fetchHygraphQuery(query);
-    return (
-        <div>
-            <ProjectList portfolios={portfolios} />
-        </div>
-    )
+  const data = await fetchHygraphQuery(query);
+  if (!data || !data.portfolios) {
+    return <div>Error loading portfolios</div>;
+  }
+
+  const { portfolios } = data;
+
+  return (
+    <div>
+      <ProjectList portfolios={portfolios} />
+    </div>
+  );
 }

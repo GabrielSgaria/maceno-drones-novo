@@ -1,24 +1,17 @@
-export type PortfolioInfo =
-  {
-    id: string,
-    descricao: string,
-    nomeDoProjeto: string,
-    slugProjeto: string,
-    fotoCapa: {
-      url: string
-    },
-    fotos: [
-      {
-        url: string | undefined
-      }
-    ]
-    videoDesktop: {
-      url: string | undefined
-    }
-  }
+export type PortfolioInfo = {
+  id: string,
+  descricao: string,
+  nomeDoProjeto: string,
+  slugProjeto: string,
+  fotoCapa: {
+    url: string
+  },
+  fotos: Array<{ url: string | undefined }>,
+  videoDesktop: Array<{ url: string | undefined }>
+}
 
 export type PortfolioContentData = {
-  portfolios?: PortfolioInfo[],
+  portfolios?: PortfolioInfo[]
 }
 
 export type PageProjectsData = {
@@ -67,3 +60,24 @@ export type ProjectDetailsProps = {
     }
   }
 }
+
+
+
+// export type PortfolioInfo =
+//   {
+//     id: string,
+//     descricao: string,
+//     nomeDoProjeto: string,
+//     slugProjeto: string,
+//     fotoCapa: {
+//       url: string
+//     },
+//     fotos: [
+//       {
+//         url: string | undefined
+//       }
+//     ]
+//     videoDesktop: {
+//       url: string | undefined
+//     }
+//   }
