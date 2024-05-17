@@ -10,7 +10,7 @@ export function ClientsCarrousel() {
     return (
         <div className="flex flex-col overflow-hidden text-center justify-center text-zinc-50 mt-16 bg-zinc-950 h-[450px]">
             <div className="flex flex-col mb-10 w-full justify-center items-center">
-                <h1 className="text-3xl"> NOSSOS CLIENTES</h1>
+                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold">NOSSOS CLIENTES</h1>
                 <p className="text-xl font-normal text-zinc-200 mt-3 max-w-[550px]">Conheça alguns de nossos clientes que tiveram sucesso em suas publicações ao contratar Maceno Films</p>
             </div>
             <div>

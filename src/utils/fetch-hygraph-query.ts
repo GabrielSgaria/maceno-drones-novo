@@ -15,12 +15,12 @@ export const fetchHygraphQuery = unstable_cache(async (query: string) => {
             },
             body: JSON.stringify({ query }),
         });
+        revalidateTag(`cache-portfolio`);
         
         if (!response.ok) {
             throw new Error(`response erro! status: ${response.status}`);
         }
         
-        revalidateTag(`cache-portfolio`);
         const result = await response.json();
         return result.data;
     } catch (err) {

@@ -7,6 +7,7 @@ import { FaFacebook, FaInstagram, FaPhone, FaPhoneSlash, FaPhoneSquareAlt, FaWha
 import Link from "next/link";
 import { FaLocationDot, FaPhoneFlip } from "react-icons/fa6";
 import { sendMensage } from "@/utils/actions";
+import { InstagramLogo } from "@phosphor-icons/react";
 
 export function Footer() {
 
@@ -27,24 +28,15 @@ export function Footer() {
             <a
               onClick={() =>
                 sendMensage(
-                  5541995020104,
-                  "Olá! Vim através do site da Volpress!."
+                  5541991839439,
+                  "Olá! Vim através do site Maceno Films Company!."
                 )
               }
               className="flex cursor-pointer items-center justify-center gap-4 text-zinc-800"
             >
               <FaWhatsapp className="size-6" />
               <p className="h-6 text-base items-center justify-center font-semibold transition-all duration-500 hover:border-b-[1px] hover:border-zinc-800">
-                (41) 99502-0104
-              </p>
-            </a>
-            <a
-              href="tel:+554133490338"
-              className="flex cursor-pointer items-center justify-center gap-4 text-zinc-800"
-            >
-              <FaPhoneFlip className="size-5" />
-              <p className="h-6 text-base items-center justify-center font-semibold transition-all duration-500 hover:border-b-[1px] hover:border-zinc-800">
-                (41) 3349-0338
+                (41) 99183-9439
               </p>
             </a>
             <Link
@@ -54,7 +46,7 @@ export function Footer() {
             >
               <EnvelopeClosedIcon className="size-6" />
               <p className="h-6 font-semibold text-base transition-all duration-500 hover:border-b-[1px] hover:border-zinc-800">
-                transportes@volpress.com.br
+                fernandomaceno12@gmail.com.br
               </p>
             </Link>
           </div>
@@ -62,21 +54,18 @@ export function Footer() {
 
         <div className="flex flex-col items-center sm:items-start">
           <h1 className="text-center text-2xl font-semibold text-zinc-800 sm:text-start ">
-            Venha <br /> nos conhecer
+            Conheça <br /> nossas redes sociais
           </h1>
-          <p className="mt-8 max-w-[300px] text-center sm:text-start text-xl sm:text-base text-zinc-600">
-            Volpress Transportes - Matriz
-          </p>
           <div className="mt-8 flex flex-col items-center gap-4 sm:items-start justify-center">
 
-            <Link
+          <Link
               target="blank"
-              href="https://maps.app.goo.gl/WEy6ZKgSTVQibxew9"
-              className="flex cursor-pointer flex-row items-center gap-4 text-zinc-800"
+              href="https://www.instagram.com/macenofilmscompany/"
+              className="flex cursor-pointer items-center gap-2 text-zinc-800"
             >
-              <FaLocationDot className="size-6" />
-              <p className="h-full font-semibold text-base transition-all duration-500 hover:border-b-[1px] hover:border-zinc-800">
-                Rod BR 116, Km 110, n. 22.730 Sala 2 <br />Tatuquara - 81690-500 - Curitiba PR
+              <InstagramLogo className="size-6" />
+              <p className="h-6 font-semibold text-base transition-all duration-500 hover:border-b-[1px] hover:border-zinc-800">
+                @macenofilmscompany
               </p>
             </Link>
           </div>

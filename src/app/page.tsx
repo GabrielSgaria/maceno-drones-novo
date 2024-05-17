@@ -60,9 +60,9 @@ export default function Home() {
               porcents="%"
             />
             <CardCounter
-              andMoney="R$"
+              andMoney=""
               numberCardCounter={100000}
-              textCardCounter="Mais de R$100.000 vendas feitas na internet com nossos vídeos"
+              textCardCounter="Mais de 100.000 visualizações na internet com nossos vídeos"
               porcents=""
             />
           </div>
@@ -71,16 +71,16 @@ export default function Home() {
       </section>
       <section className="py-16 bg-zinc-950">
         <div className="w-full flex flex-col justify-center items-center gap-10">
-          <h1 className="font-bold text-5xl text-zinc-50">Solicite um orçamento agora!</h1>
+          <h1 className="font-bold text-2xl sm:text-2xl md:text-4xl lg:text-5xl text-zinc-50">Solicite um orçamento agora!</h1>
           <ButtonWpp />
         </div>
       </section>
 
       <section className="py-16" id='services'>
         <div className="mx-auto container flex items-center justify-center mb-10">
-          <h1 className="text-5xl font-bold">NOSSOS SERVIÇOS</h1>
+          <h1 className="font-bold text-3xl md:text-4xl lg:text-5xl">NOSSOS SERVIÇOS</h1>
         </div>
-        <div className="grid grid-flow-col grid-cols-2 grid-rows-2 mx-auto container gap-20 ">
+        <div className="grid grid-flow-row grid-cols-1 md:grid-cols-2 mx-auto container gap-10 sm:gap-20 px-4 sm:px-0">
           <CardServices
             imageCardServices="/image/fotos/DJI_0548.JPG"
             altCardServices="Institucional Image"
@@ -115,7 +115,7 @@ export default function Home() {
       </div>
       <section className="py-16">
         <div className="flex flex-col mx-auto container items-center">
-          <h1 className="text-5xl uppercase font-bold">PORTFÓLIO</h1>
+          <h1 className="text-2xl sm:text-2xl md:text-4xl lg:text-5xl uppercase font-bold">PORTFÓLIO</h1>
           <p className="text-xl text-zinc-700">conheça alguns de nossos projetos</p>
         </div>
         <div className="mx-auto flex container mt-10 flex-col">
