@@ -4,7 +4,7 @@ import { unstable_cache, revalidateTag } from "next/cache";
 const url = process.env.HYGRAPH_URL as string;
 const token = process.env.HYGRAPH_TOKEN as string;
 
-export const fetchHygraphQuery = unstable_cache(async (query: string) => {
+export const fetchHygraphQuery = async (query: string) => {
     try {
         const response = await fetch(url, {
             method: "POST",
@@ -15,10 +15,8 @@ export const fetchHygraphQuery = unstable_cache(async (query: string) => {
             },
             body: JSON.stringify({ query }),
             next: {
-                revalidate: 3000
-                
-            },
-            cache: 'force-cache'
+                revalidate: 1000
+            }
         });
         
         if (!response.ok) {
@@ -31,6 +29,4 @@ export const fetchHygraphQuery = unstable_cache(async (query: string) => {
         console.error("Error fetching data:", err);
         return null;
     }
-}, ['cache-portfolio'], {
-    tags: ['cache-portfolio']
-});
+}
