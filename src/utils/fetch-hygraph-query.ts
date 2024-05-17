@@ -15,7 +15,6 @@ export const fetchHygraphQuery = unstable_cache(async (query: string) => {
             },
             body: JSON.stringify({ query }),
         });
-        revalidateTag(`cache-portfolio`);
         
         if (!response.ok) {
             throw new Error(`response erro! status: ${response.status}`);
