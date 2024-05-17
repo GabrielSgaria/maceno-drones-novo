@@ -6,17 +6,10 @@ import {
 import { FaFacebook, FaInstagram, FaPhone, FaPhoneSlash, FaPhoneSquareAlt, FaWhatsapp } from "react-icons/fa";
 import Link from "next/link";
 import { FaLocationDot, FaPhoneFlip } from "react-icons/fa6";
+import { sendMensage } from "@/utils/actions";
 
 export function Footer() {
-  function sendMensage(numeroTelefone: number, mensagemPadrao: string) {
-    var linkWhatsApp =
-      "https://wa.me/" +
-      numeroTelefone +
-      "?text=" +
-      encodeURIComponent(mensagemPadrao);
 
-    window.open(linkWhatsApp, "_blank");
-  }
 
   return (
     <footer id="contacts" className="pb-8 border-t border-zinc-300/80">

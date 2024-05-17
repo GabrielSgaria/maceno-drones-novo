@@ -1,26 +1,9 @@
-import { PageProjectsData, PortfolioContentData } from "@/types/portfolio-info"
-import { fetchHygraphQuery } from "./fetch-hygraph-query"
+export function sendMensage(numeroTelefone: number, mensagemPadrao: string) {
+    var linkWhatsApp =
+      "https://wa.me/" +
+      numeroTelefone +
+      "?text=" +
+      encodeURIComponent(mensagemPadrao);
 
-// export const getAllProjects = async (): Promise<PortfolioContentData> => {
-//   const query = `query MyQuery {
-//       portfolios (stage: PUBLISHED) {
-//         descricao
-//         nomeDoProjeto
-//         id
-//         slugProjeto
-//         videoDesktop {
-//           url
-//         }
-//         fotoCapa {
-//           url
-//         }
-//         fotos {
-//           url
-//         }
-//       }
-//     }
-//   `
-//   return fetchHygraphQuery(
-//     query
-//   )
-// }
+    window.open(linkWhatsApp, "_blank");
+  }

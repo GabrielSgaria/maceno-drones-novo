@@ -3,6 +3,8 @@ import Link from "next/link";
 import { DotsHorizontalIcon, PersonIcon } from "@radix-ui/react-icons";
 import { useState } from "react";
 import Image from "next/image";
+import { WhatsappLogo } from "@phosphor-icons/react";
+import { sendMensage } from "@/utils/actions";
 
 export function NavBar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -84,10 +86,15 @@ export function NavBar() {
                     </div>
 
                     <button
-                        onClick={() => scrollToSection("contacts")}
+                        onClick={() =>
+                            sendMensage(
+                              5541995020104,
+                              "Olá! Vim através do site da Volpress!."
+                            )
+                          }
                         className="cursor-pointer px-3 bg-zinc-950 saira text-2xl text-zinc-50/70 hover:text-zinc-50 transition-all"
                     >
-                        <PersonIcon className="size-7 w-8 transition-all duration-300 hover:size-8" />
+                        <WhatsappLogo className="size-7 w-8 transition-all duration-300 hover:size-8" />
                     </button>
                 </div>
             </div>
