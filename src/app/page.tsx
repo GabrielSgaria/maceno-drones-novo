@@ -7,6 +7,7 @@ import { CardCounter } from "@/components/counter-up";
 import { Footer } from "@/components/footer";
 import { SparklesCore } from "@/components/ui/sparkles";
 import Link from "next/link";
+import { InstagramEmbed } from "react-social-media-embed";
 
 
 
@@ -38,34 +39,34 @@ export default function Home() {
             />
             <div className="absolute inset-0 w-full h-full bg-zinc-950 [mask-image:radial-gradient(350px_200px_at_top,transparent_20%,white)]"></div>
           </div>
-        <div className="container mx-auto flex justify-center items-center mt-5">
-          <div className="grid px-4 grid-flow-row md:grid-flow-col grid-cols-2 sm:grid-cols-4 gap-3">
-            <CardCounter
-              andMoney=""
-              numberCardCounter={82}
-              textCardCounter="Você sabia que 82% de todo tráfego na internet foi gerado por vídeo? "
-              porcents="%"
-            />
-            <CardCounter
-              andMoney=""
-              numberCardCounter={1200}
-              textCardCounter="Vídeos em redes sociais geram 1.200% mais compartilhamentos do que fotos e textos"
-              porcents="%"
-            />
-            <CardCounter
-              andMoney=""
-              numberCardCounter={54}
-              textCardCounter="Aumentamos 54% o alcance das marcas parceiras"
-              porcents="%"
-            />
-            <CardCounter
-              andMoney=""
-              numberCardCounter={100000}
-              textCardCounter="Mais de 100.000 visualizações na internet com nossos vídeos"
-              porcents=""
-            />
+          <div className="container mx-auto flex justify-center items-center mt-5">
+            <div className="grid px-4 grid-flow-row md:grid-flow-col grid-cols-2 sm:grid-cols-4 gap-3">
+              <CardCounter
+                andMoney=""
+                numberCardCounter={82}
+                textCardCounter="Você sabia que 82% de todo tráfego na internet foi gerado por vídeo? "
+                porcents="%"
+              />
+              <CardCounter
+                andMoney=""
+                numberCardCounter={1200}
+                textCardCounter="Vídeos em redes sociais geram 1.200% mais compartilhamentos do que fotos e textos"
+                porcents="%"
+              />
+              <CardCounter
+                andMoney=""
+                numberCardCounter={54}
+                textCardCounter="Aumentamos 54% o alcance das marcas parceiras"
+                porcents="%"
+              />
+              <CardCounter
+                andMoney=""
+                numberCardCounter={100000}
+                textCardCounter="Mais de 100.000 visualizações na internet com nossos vídeos"
+                porcents=""
+              />
+            </div>
           </div>
-        </div>
         </div>
       </section>
       <section className="py-16 bg-zinc-950">
@@ -122,6 +123,29 @@ export default function Home() {
           <Link href='/portfolio' className="w-80 mt-10 flex mx-auto container justify-center bg-zinc-50 text-zinc-950 rounded-xl text-2xl py-3 px-3 border-2 font-bold transition-all border-zinc-950 hover:bg-zinc-950 hover:text-zinc-50">
             PORTFÓLIO COMPLETO
           </Link>
+        </div>
+      </section>
+      <section className="py-16 bg-zinc-950">
+        <div className="mx-auto container flex items-center justify-center flex-col gap-10">
+          <h1 className="font-bold text-3xl md:text-4xl lg:text-5xl text-zinc-50 ">QUEM SOMOS?</h1>
+          <div className="w-full flex justify-around items-center">
+            <div className="max-w-[50%] w-[50%] flex flex-col items-center justify-center gap-16">
+              <h1 className="text-zinc-50 text-5xl font-bold">MACENO FILMS COMPANY</h1>
+              <p className="text-lg text-zinc-50 text-justify">
+                Na Maceno Films Company, transformamos visões em realidade com vídeos de alta qualidade.
+                Com um aumento de 54% no alcance das marcas parceiras e mais de 100.000 visualizações na internet. Especializados em vídeos institucionais, imobiliários,
+                cobertura de eventos e criativos para anúncios, usamos filmagem avançada e drones para capturar cada detalhe de forma profissional.
+                Acompanhe nosso dia a dia no Instagram. Solicite um orçamento e veja como podemos impulsionar sua marca.
+              </p>
+              <Link href='www.instagram.com/macenofilmscompany/' className="ml-2 py-3 px-5 text-xl text-zinc-50 font-bold rounded-sm bg-blue-500 hover:bg-blue-600 transition-all duration-200">
+                Ver perfil
+              </Link>
+            </div>
+
+            <div className="flex justify-center items-center w-[50%]">
+              <InstagramEmbed url='https://www.instagram.com/p/C7CVE3FrqjU/' width={390} captioned />
+            </div>
+          </div>
         </div>
       </section>
       <Footer />
