@@ -7,11 +7,11 @@ export default function ProjectList({ portfolios }: PortfolioContentData) {
     revalidateTag('portfolio')
     return (
         <div className="container mx-auto py-16">
-            <h1 className="text-3xl font-bold uppercase">Portfólio Maceno drones</h1>
+            <h1 className="md:text-2xl text-xl text-center font-bold uppercase">Portfólio <br /> Maceno Films Company</h1>
             {portfolios && portfolios.length > 0 ? (
-                <div className="py-16 flex-wrap-reverse flex space-y-5 gap-5 justify-center">
+                <div className="py-16 flex-wrap-reverse flex space-y-5 gap-5 justify-center px-4 sm:px-0">
                     {portfolios?.map((projeto, index) => (
-                        <div key={index} className="relative opacity-75 hover:opacity-100 max-w-[410px] max-h-[250px]">
+                        <div key={index} className="relative opacity-75 hover:opacity-100 w-full max-w-[410px] min-h-[220px] max-h-[220px]">
                             <Link href={`/portfolio/${projeto.slugProjeto}`} className="w-full h-full">
                                 <Image
                                     width={900}
@@ -32,7 +32,7 @@ export default function ProjectList({ portfolios }: PortfolioContentData) {
             ) : (
                 <div>Não foram encontrados projetos.</div>
             )}
-        
+
         </div>
     );
 }

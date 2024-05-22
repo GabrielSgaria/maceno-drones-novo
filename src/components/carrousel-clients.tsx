@@ -11,7 +11,7 @@ export function ClientsCarrousel() {
         <div className="flex flex-col overflow-hidden text-center justify-center text-zinc-50 mt-16 bg-zinc-950 h-[450px]">
             <div className="flex flex-col mb-10 w-full justify-center items-center">
                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold">NOSSOS CLIENTES</h1>
-                <p className="text-xl font-normal text-zinc-200 mt-3 max-w-[550px]">Conheça alguns de nossos clientes que tiveram sucesso em suas publicações ao contratar Maceno Films</p>
+                <p className="text-sm sm:text-base font-normal text-zinc-200 mt-3 max-w-[550px]">Conheça alguns de nossos clientes que tiveram sucesso em suas publicações ao contratar Maceno Films</p>
             </div>
             <div>
                 <Splide
@@ -22,7 +22,7 @@ export function ClientsCarrousel() {
                         arrows: false,
                         pagination: false,
                         drag: "free",
-                        gap: 80,
+                        gap: 60,
                         padding: 180,
                         autoWidth: true,
 
@@ -40,7 +40,7 @@ export function ClientsCarrousel() {
                             height={100000}
                             alt=""
                             src="/image/clients/28.png"
-                            className=" object-contain h-[150px] w-[150px]"
+                            className=" object-contain w-[120px] h-[120px] sm:h-[150px] sm:w-[150px]"
                         />
                     </SplideSlide>
                     <SplideSlide>
@@ -49,7 +49,7 @@ export function ClientsCarrousel() {
                             height={100000}
                             alt=""
                             src="/image/clients/26.png"
-                            className=" object-contain h-[150px] w-[150px]"
+                            className=" object-contain w-[120px] h-[120px] sm:h-[150px] sm:w-[150px]"
 
                         />
                     </SplideSlide>

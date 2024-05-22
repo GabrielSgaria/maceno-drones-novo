@@ -38,7 +38,7 @@ export default async function PageProjects({ params: { slug } }: PageProjectsPro
   const { portfolio } = data;
 
   if (!portfolio) {
-    return <div>Project not found</div>;
+    return <div className="flex text-2xl text-red-600 items-center justify-center h-screen w-full">Projetos não encontrados</div>;
   }
 
   return (

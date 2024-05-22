@@ -14,7 +14,7 @@ export function CardPortfolio(){
     const [thumbsSwiper, setThumbsSwiper] = useState<SwiperCore | null>(null);
     
     return(
-        <div className='container mx-auto w-full sm:px-20 xl:w-10/12 flex flex-col'>
+        <div className='container mx-auto w-full sm:px-20 xl:w-10/12 flex flex-col px-4'>
           <Swiper
             loop={true}
             spaceBetween={10}
@@ -24,7 +24,7 @@ export function CardPortfolio(){
                 thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null
             }}
             modules={[FreeMode, Navigation, Thumbs]}
-            className='h-[500px] w-full rounded-lg shadow-xl'
+            className='h-[420px] sm:h-[500px] w-full rounded-lg shadow-xl'
           >
             {images.map((image, index) => (
               <SwiperSlide key={index}>
@@ -32,6 +32,7 @@ export function CardPortfolio(){
                   <Image
                     src={image.src}
                     alt={image.alt}
+                    quality={100}
                     className='block h-full w-full object-fill '
                   />
                 </div>

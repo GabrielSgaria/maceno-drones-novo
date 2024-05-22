@@ -10,7 +10,6 @@ import Link from "next/link";
 import { InstagramEmbed } from "react-social-media-embed";
 
 
-
 export default function Home() {
   return (
     <div>
@@ -116,33 +115,43 @@ export default function Home() {
       <section className="py-16">
         <div className="flex flex-col mx-auto container items-center">
           <h1 className="text-2xl sm:text-2xl md:text-4xl lg:text-5xl uppercase font-bold">PORTFÓLIO</h1>
-          <p className="text-xl text-zinc-700">conheça alguns de nossos projetos</p>
+          <p className="text-base sm:text-lg  text-zinc-700">conheça alguns de nossos projetos</p>
         </div>
         <div className="mx-auto flex container mt-10 flex-col">
           <CardPortfolio />
-          <Link href='/portfolio' className="w-80 mt-10 flex mx-auto container justify-center bg-zinc-50 text-zinc-950 rounded-xl text-2xl py-3 px-3 border-2 font-bold transition-all border-zinc-950 hover:bg-zinc-950 hover:text-zinc-50">
+          <Link href='/portfolio' className="w-60 sm:w-80 mt-10 flex mx-auto container justify-center bg-zinc-50 text-zinc-950 rounded-xl text-lg sm:text-2xl py-3 px-3 border-2 font-bold transition-all border-zinc-950 hover:bg-zinc-950 hover:text-zinc-50">
             PORTFÓLIO COMPLETO
           </Link>
         </div>
       </section>
       <section className="py-16 bg-zinc-950">
         <div className="mx-auto container flex items-center justify-center flex-col gap-10">
-          <h1 className="font-bold text-3xl md:text-4xl lg:text-5xl text-zinc-50 ">QUEM SOMOS?</h1>
-          <div className="w-full flex justify-around items-center">
-            <div className="max-w-[50%] w-[50%] flex flex-col items-center justify-center gap-16">
-              <h1 className="text-zinc-50 text-5xl font-bold">MACENO FILMS COMPANY</h1>
-              <p className="text-lg text-zinc-50 text-justify">
+
+          <h1 className="font-bold text-3xl md:text-4xl lg:text-5xl text-zinc-50 ">
+            QUEM SOMOS?
+          </h1>
+
+          <div className="w-full flex justify-around items-center flex-col md:flex-row">
+            <div className="px-4 md:px-0 md:max-w-[50%] md:w-[50%] flex flex-col items-center justify-center gap-10 md:gap-16 mb-10 md:mb-0">
+              
+              <h1 className="text-zinc-50 text-center font-bold text-3xl md:text-4xl lg:text-5xl">
+                MACENO FILMS COMPANY
+              </h1>
+
+              <p className="text-base md:text-lg text-zinc-50 text-justify">
                 Na Maceno Films Company, transformamos visões em realidade com vídeos de alta qualidade.
                 Com um aumento de 54% no alcance das marcas parceiras e mais de 100.000 visualizações na internet. Especializados em vídeos institucionais, imobiliários,
                 cobertura de eventos e criativos para anúncios, usamos filmagem avançada e drones para capturar cada detalhe de forma profissional.
                 Acompanhe nosso dia a dia no Instagram. Solicite um orçamento e veja como podemos impulsionar sua marca.
               </p>
-              <Link href='www.instagram.com/macenofilmscompany/' className="ml-2 py-3 px-5 text-xl text-zinc-50 font-bold rounded-sm bg-blue-500 hover:bg-blue-600 transition-all duration-200">
+
+              <Link href='www.instagram.com/macenofilmscompany/' className="ml-2 py-3 px-5 text-lg sm:text-2xl text-zinc-50 font-bold rounded-sm bg-blue-500 hover:bg-blue-600 transition-all duration-200">
                 Ver perfil
               </Link>
+
             </div>
 
-            <div className="flex justify-center items-center w-[50%]">
+            <div className="flex justify-center items-center md:w-[50%] w-full px-4">
               <InstagramEmbed url='https://www.instagram.com/p/C7CVE3FrqjU/' width={390} captioned />
             </div>
           </div>
