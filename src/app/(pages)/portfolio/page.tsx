@@ -1,3 +1,5 @@
+import { ButtonScrollTop } from "@/components/button-scroll-top";
+import { ButtonWhatsAppFixed } from "@/components/button-whatsapp-fixed";
 import ProjectList from "@/components/project-list";
 import { fetchHygraphQuery } from "@/utils/fetch-hygraph-query";
 import { revalidateTag } from "next/cache";
@@ -31,6 +33,8 @@ export default async function Portfolio() {
     return (
       
       <div>
+        <ButtonScrollTop />
+        <ButtonWhatsAppFixed />
         <ProjectList portfolios={portfolios} />
       </div>
     );

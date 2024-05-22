@@ -14,7 +14,7 @@ export function CardPortfolio(){
     const [thumbsSwiper, setThumbsSwiper] = useState<SwiperCore | null>(null);
     
     return(
-        <div className='container mx-auto w-full sm:px-20 xl:w-10/12 flex flex-col px-4'>
+        <div className='container mx-auto w-full sm:px-20 xl:w-9/12 flex flex-col px-4'>
           <Swiper
             loop={true}
             spaceBetween={10}

@@ -40,7 +40,7 @@ export function ClientsCarrousel() {
                             height={100000}
                             alt=""
                             src="/image/clients/28.png"
-                            className=" object-contain w-[120px] h-[120px] sm:h-[150px] sm:w-[150px]"
+                            className="object-contain w-[120px] h-[120px] sm:h-[150px] sm:w-[150px]"
                         />
                     </SplideSlide>
                     <SplideSlide>

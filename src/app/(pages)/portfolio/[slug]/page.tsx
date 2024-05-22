@@ -1,3 +1,5 @@
+import { ButtonScrollTop } from "@/components/button-scroll-top";
+import { ButtonWhatsAppFixed } from "@/components/button-whatsapp-fixed";
 import { ProjectDetails } from "@/components/project-details";
 import { PageProjectsData } from "@/types/portfolio-info";
 import { fetchHygraphQuery } from "@/utils/fetch-hygraph-query";
@@ -43,6 +45,8 @@ export default async function PageProjects({ params: { slug } }: PageProjectsPro
 
   return (
     <div>
+      <ButtonScrollTop />
+      <ButtonWhatsAppFixed />
       <ProjectDetails projectSlug={data} />
     </div>
   );

@@ -63,24 +63,31 @@ export function NavBar() {
                                 >
                                     Serviços
                                 </button>
+
                                 <button
                                     onClick={() => scrollToSection("clients")}
                                     className="cursor-pointer px-3 bg-zinc-950 text-lg text-zinc-50/70 hover:text-zinc-50 transition-all uppercase hover:border hover:border-zinc-50 rounded-full w-[120px] h-[30px]"
                                 >
                                     Clientes
                                 </button>
-                                <Link
-                                    href="/portfolio"
-                                    className="flex items-center justify-center text-center cursor-pointer px-3 bg-zinc-950 text-lg text-zinc-50/70 hover:text-zinc-50 transition-all uppercase hover:border hover:border-zinc-50 rounded-full w-[130px] h-[30px]"
+                                <button
+                                    onClick={() => scrollToSection("about")}
+                                    className="cursor-pointer px-3 bg-zinc-950 text-lg text-zinc-50/70 hover:text-zinc-50 transition-all uppercase hover:border hover:border-zinc-50 rounded-full w-[120px] h-[30px]"
                                 >
-                                    <p>Portfólio</p>
-                                </Link>
+                                    Contato
+                                </button>
                                 <button
                                     onClick={() => scrollToSection("contacts")}
                                     className="cursor-pointer px-3 bg-zinc-950 text-lg text-zinc-50/70 hover:text-zinc-50 transition-all uppercase hover:border hover:border-zinc-50 rounded-full w-[120px] h-[30px]"
                                 >
                                     Contato
                                 </button>
+                                <Link
+                                    href="/portfolio"
+                                    className="flex items-center justify-center text-center cursor-pointer px-3 bg-zinc-900 hover:bg-zinc-950 text-lg text-zinc-50 hover:text-zinc-50 transition-all uppercase border border-zinc-800 hover:border hover:border-zinc-50 rounded-full w-[130px] h-[30px]"
+                                >
+                                    <p>Portfólio</p>
+                                </Link>
                             </div>
                         </nav>
                     </div>

@@ -1,4 +1,6 @@
 'use client'
+import { ButtonScrollTop } from "@/components/button-scroll-top";
+import { ButtonWhatsAppFixed } from "@/components/button-whatsapp-fixed";
 import { ButtonWpp } from "@/components/button-wpp";
 import { CardPortfolio } from "@/components/card-portfolio";
 import { CardServices } from "@/components/card-services";
@@ -13,6 +15,8 @@ import { InstagramEmbed } from "react-social-media-embed";
 export default function Home() {
   return (
     <div>
+      <ButtonScrollTop />
+      <ButtonWhatsAppFixed />
       <section>
         <div className="h-[40rem] w-full bg-zinc-950 flex flex-col items-center justify-center overflow-hidden relative">
           <h1 className="text-[40px] md:text-[100px] lg:text-[130px] font-extrabold text-center text-white relative z-20 mb-3 sm:mb-0 uppercase">
@@ -124,7 +128,7 @@ export default function Home() {
           </Link>
         </div>
       </section>
-      <section className="py-16 bg-zinc-950">
+      <section className="py-16 bg-zinc-950" id='about'>
         <div className="mx-auto container flex items-center justify-center flex-col gap-10">
 
           <h1 className="font-bold text-3xl md:text-4xl lg:text-5xl text-zinc-50 ">
@@ -157,7 +161,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <Footer />
     </div >
 
   );
