@@ -24,7 +24,7 @@ export function CardPortfolio(){
                 thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null
             }}
             modules={[FreeMode, Navigation, Thumbs]}
-            className='h-[420px] sm:h-[500px] w-full rounded-lg shadow-xl'
+            className='h-[580px] sm:h-[500px] w-full rounded-lg shadow-xl'
           >
             {images.map((image, index) => (
               <SwiperSlide key={index}>
@@ -32,8 +32,11 @@ export function CardPortfolio(){
                   <Image
                     src={image.src}
                     alt={image.alt}
+                    width={9000}
+                    height={9000}
                     quality={100}
-                    className='block h-full w-full object-fill '
+                    priority={true}
+                    className='block h-full w-full object-cover'
                   />
                 </div>
               </SwiperSlide>
@@ -57,6 +60,9 @@ export function CardPortfolio(){
                   <Image
                     src={image.src}
                     alt={image.alt}
+                    width={900}
+                    height={900}
+                    quality={100}
                     className='block h-full w-full object-fill'
                   />
                 </button>

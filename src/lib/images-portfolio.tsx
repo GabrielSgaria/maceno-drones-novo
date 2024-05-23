@@ -1,13 +1,13 @@
-import first from '../../public/image/fotos/dji_fly_20231122_084012_150_1700653219772_photo_optimized.jpg'
-import second from '../../public/image/fotos/dji_fly_20231122_083044_135_1700652653902_photo_optimized.jpg'
-import third from '../../public/image/fotos/dji_fly_20231122_090942_155_1700654991391_photo_optimized.jpg'
-import fourth from '../../public/image/fotos/res1.jpg'
+let image1 = 'https://media.graphassets.com/SK2E8bvlROOkXxKhhaZe'
+let image2 = 'https://media.graphassets.com/FQOpBEXhSce2zUE13V9D'
+let image3 = 'https://media.graphassets.com/FHBTdMrAR6yrNuxU9wi2'
+let image4 = 'https://media.graphassets.com/DpMJmA4jRqqbDbZj68mp'
 
 
 export const images = [
-    { src: first, alt: 'foto1' },
-    { src: second, alt: 'foto 2' },
-    { src: third, alt: 'foto 3' },
-    { src: fourth, alt: 'foto 4' },
+    { src: image1, alt: 'foto 1' },
+    { src: image2, alt: 'foto 2' },
+    { src: image3, alt: 'foto 3' },
+    { src: image4, alt: 'foto 4' },
 
 ]

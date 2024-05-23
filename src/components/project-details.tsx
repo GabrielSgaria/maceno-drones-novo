@@ -13,7 +13,9 @@ export function ProjectDetails({ projectSlug }: ProjectDetailsProps) {
 
   return (
     <div className="container mx-auto py-10 px-4 sm:px-0">
-      <Link href="/portfolio" className="bg-zinc-800 hover:bg-zinc-950 p-3 rounded-xl text-zinc-50 font-bold transition-all shadow-2xl">Voltar</Link>
+      <div className="flex items-center justify-center sm:pl-10 sm:justify-start sm:items-center w-full">
+        <Link href="/portfolio" className="bg-zinc-800 hover:bg-zinc-950 p-3 rounded-xl text-zinc-50 font-bold transition-all shadow-2xl w-20 h-12 justify-center text-center mb-4 ">Voltar</Link>
+      </div>
       <div className="flex flex-col items-center justify-center gap-5">
         <h1 className="md:text-2xl text-xl text-center font-bold uppercase">{detailsProject.nomeDoProjeto}</h1>
         <p className="text-base text-center md:text-lg w-full max-w-[900px] md:text-justify">{detailsProject.descricao}</p>

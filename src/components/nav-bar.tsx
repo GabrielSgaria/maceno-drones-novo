@@ -19,8 +19,8 @@ export function NavBar() {
     const scrollToSection = (id: string) => {
         const element = document.getElementById(id);
         if (element) {
-            element.scrollIntoView({ behavior: "smooth" });
             closeMenu();
+            element.scrollIntoView({ behavior: "smooth" });
         }
     };
 
@@ -72,9 +72,9 @@ export function NavBar() {
                                 </button>
                                 <button
                                     onClick={() => scrollToSection("about")}
-                                    className="cursor-pointer px-3 bg-zinc-950 text-lg text-zinc-50/70 hover:text-zinc-50 transition-all uppercase hover:border hover:border-zinc-50 rounded-full w-[120px] h-[30px]"
+                                    className="cursor-pointer px-3 bg-zinc-950 text-lg text-zinc-50/70 hover:text-zinc-50 transition-all uppercase hover:border hover:border-zinc-50 rounded-full w-[170px] h-[30px]"
                                 >
-                                    Contato
+                                    Quem somos
                                 </button>
                                 <button
                                     onClick={() => scrollToSection("contacts")}
