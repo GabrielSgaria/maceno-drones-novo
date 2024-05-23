@@ -41,7 +41,7 @@ export function Footer() {
             </a>
             <Link
               target="blank"
-              href="mailto:transportes@volpress.com.br"
+              href="mailto:fernandomaceno12@gmail.com.br"
               className="flex cursor-pointer items-center gap-4 text-zinc-800"
             >
               <EnvelopeClosedIcon className="size-6" />
