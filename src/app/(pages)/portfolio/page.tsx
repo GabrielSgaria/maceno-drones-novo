@@ -25,7 +25,7 @@ const query = `query MyQuery {
 const url = process.env.HYGRAPH_URL as string;
 const token = process.env.HYGRAPH_TOKEN as string;
 
-export const fetchHygraphQuery = unstable_cache(async (query: string) => {
+const fetchHygraphQuery = unstable_cache(async (query: string) => {
     try {
         const response = await fetch(url, {
             method: "POST",
