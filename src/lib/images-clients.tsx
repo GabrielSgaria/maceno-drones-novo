@@ -19,8 +19,6 @@ import logoMgmMarcenaria from '../../public/image/clients/18.png'
 import logoALM from '../../public/image/clients/19.jpg'
 
 
-
-
 export const imagesLogo = [
     { src: logoRock, alt: 'Logo Power Rock Dog Gurmet' },
     { src: sansFelix, alt: 'Logo Sans Felix' },
