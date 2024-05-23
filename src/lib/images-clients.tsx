@@ -12,11 +12,11 @@ import logoCapoeira from '../../public/image/clients/11.jpg'
 import logoKing from '../../public/image/clients/12.png'
 import logoPcDrift from '../../public/image/clients/13.jpg'
 import logoCidadeDaLuta from '../../public/image/clients/14.jpg'
-import logoBDN from '../../public/image/clients/15.jpg'
+import logoBDN from '../../public/image/clients/arq15.jpg'
 import logoResSolELua from '../../public/image/clients/16.png'
 import logoSimoes from '../../public/image/clients/17.jpg'
 import logoMgmMarcenaria from '../../public/image/clients/18.png'
-import logoALM from '../../public/image/clients/19.jpg'
+import logoALM from '../../public/image/clients/arq19.jpg'
 
 
 export const imagesLogo = [
