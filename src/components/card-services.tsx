@@ -11,7 +11,7 @@ export function CardServices({ imageCardServices, descCardServices, altCardServi
     return (
 
         <div className="py-2 px-2 border border-zinc-200 bg-zinc-100 rounded-2xl shadow-md text-center">
-            <Image width={900} height={900} alt={altCardServices} src={imageCardServices} className="object-fill w-full rounded-xl" />
+            <Image width={900} height={900} quality={100} alt={altCardServices} src={imageCardServices} className="object-fill w-full rounded-xl" />
             <h1 className="text-2xl md:text-3xl font-bold uppercase my-2">
                 {textCardServices}
             </h1>

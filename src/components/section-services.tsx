@@ -18,14 +18,14 @@ export function SectionServices() {
 
             />
             <CardServices
-                imageCardServices="/image/fotos/dji_fly_20231122_083044_135_1700652653902_photo_optimized.jpg"
+                imageCardServices="https://media.graphassets.com/W0Xs3hX9RXO7VO7vdkod"
                 altCardServices="Eventos"
                 textCardServices="Eventos"
                 descCardServices="Capture a emoção do evento com um vídeo profissional. Especializado em cobrir eventos de lutas, drift de carros, shows de manobras radicais. Com técnicas avançadas de filmagem e drones, garanto um vídeo impactante e memorável."
 
             />
             <CardServices
-                imageCardServices="/image/fotos/res1.jpg"
+                imageCardServices="https://media.graphassets.com/SpjkHy1R5urLmKVy6uNV"
                 altCardServices="Criativo para anuncios"
                 textCardServices="Criativo para anuncios"
                 descCardServices="Maximize o impacto da sua campanha com vídeos dinâmicos. Destaco ofertas e produtos de forma atraente, capturando a atenção do público-alvo e impulsionando suas vendas com produções inovadoras e profissionais."
