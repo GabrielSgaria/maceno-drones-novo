@@ -1,6 +1,6 @@
 let image1 = 'https://media.graphassets.com/SK2E8bvlROOkXxKhhaZe'
 let image2 = 'https://media.graphassets.com/FQOpBEXhSce2zUE13V9D'
-let image3 = 'https://media.graphassets.com/FHBTdMrAR6yrNuxU9wi2'
+let image3 = 'https://media.graphassets.com/6qdkIxRFT9GqOHjE1rot'
 let image4 = 'https://media.graphassets.com/DpMJmA4jRqqbDbZj68mp'
 
 

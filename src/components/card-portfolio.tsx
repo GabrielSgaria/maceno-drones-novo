@@ -63,7 +63,7 @@ export function CardPortfolio(){
                     width={900}
                     height={900}
                     quality={100}
-                    className='block h-full w-full object-fill'
+                    className='block h-full w-full object-cover'
                   />
                 </button>
               </SwiperSlide>
